@@ -60,13 +60,4 @@ class ShippingLabelButton extends Template implements BlockInterface
             ['hash' => $this->request->getUrlHash(), 'request_id' => $this->request->getRequestId()]
         );
     }
-
-    protected function _toHtml()
-    {
-        if (!$this->request || !$this->request->getShippingLabel()) {
-            return '';
-        }
-
-        return parent::_toHtml();
-    }
 }
